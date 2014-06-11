@@ -19,6 +19,8 @@
 		B234271319488A0000A0D11C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23426FB19488A0000A0D11C /* UIKit.framework */; };
 		B234271B19488A0000A0D11C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B234271919488A0000A0D11C /* InfoPlist.strings */; };
 		B234271D19488A0000A0D11C /* CEMKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B234271C19488A0000A0D11C /* CEMKitTests.m */; };
+		B234272919488A1B00A0D11C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B234272819488A1B00A0D11C /* TestViewController.m */; };
+		B234272C19488A3600A0D11C /* CEMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B234272B19488A3600A0D11C /* CEMKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		B234271819488A0000A0D11C /* CEMKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CEMKitTests-Info.plist"; sourceTree = "<group>"; };
 		B234271A19488A0000A0D11C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B234271C19488A0000A0D11C /* CEMKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CEMKitTests.m; sourceTree = "<group>"; };
+		B234272719488A1B00A0D11C /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		B234272819488A1B00A0D11C /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		B234272A19488A3600A0D11C /* CEMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CEMKit.h; path = CEMKit/CEMKit.h; sourceTree = "<group>"; };
+		B234272B19488A3600A0D11C /* CEMKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CEMKit.m; path = CEMKit/CEMKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +113,11 @@
 		B23426FD19488A0000A0D11C /* CEMKit */ = {
 			isa = PBXGroup;
 			children = (
+				B234272619488A0700A0D11C /* CEMKit */,
 				B234270619488A0000A0D11C /* AppDelegate.h */,
 				B234270719488A0000A0D11C /* AppDelegate.m */,
+				B234272719488A1B00A0D11C /* TestViewController.h */,
+				B234272819488A1B00A0D11C /* TestViewController.m */,
 				B234270919488A0000A0D11C /* Images.xcassets */,
 				B23426FE19488A0000A0D11C /* Supporting Files */,
 			);
@@ -142,6 +151,15 @@
 				B234271919488A0000A0D11C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B234272619488A0700A0D11C /* CEMKit */ = {
+			isa = PBXGroup;
+			children = (
+				B234272A19488A3600A0D11C /* CEMKit.h */,
+				B234272B19488A3600A0D11C /* CEMKit.m */,
+			);
+			name = CEMKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +257,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B234272C19488A3600A0D11C /* CEMKit.m in Sources */,
+				B234272919488A1B00A0D11C /* TestViewController.m in Sources */,
 				B234270819488A0000A0D11C /* AppDelegate.m in Sources */,
 				B234270419488A0000A0D11C /* main.m in Sources */,
 			);
