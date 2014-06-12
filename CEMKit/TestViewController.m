@@ -22,10 +22,6 @@
     [but addCornerRadius:10];
     [but addGradientWithStartColor:[UIColor clearColor] endColor:[UIColor redColor]];
     [page addSubview:but];
-    
-    [CEMKit jsonRequest:@"https://www.zet.com/api/v1/produc" json:^(id object) {
-        NSLog(@"%@", object);
-    } error:nil];
 }
 
 - (void)buttonPress:(id)sender {
