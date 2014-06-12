@@ -135,42 +135,6 @@
     [alert show];
 }
 
-#pragma mark - UIView
-+ (void)addShadow:(UIView *)view offset:(CGSize)offset radius:(CGFloat)radius color:(UIColor *)color {
-    [view.layer setShadowColor:color.CGColor];
-    [view.layer setShadowRadius:radius];
-    [view.layer setShadowOffset:offset];
-    
-    [view.layer setMasksToBounds:YES];
-}
-
-+ (void)addBorder:(UIView *)view width:(CGFloat)width color:(UIColor *)color {
-    [view.layer setBorderColor:color.CGColor];
-    [view.layer setBorderWidth:width];
-    
-    [view.layer setMasksToBounds:YES];
-}
-
-+ (void)addCornerRadius:(UIView *)view radius:(CGFloat)radius {
-    [view.layer setCornerRadius:radius];
-    [view.layer setMasksToBounds:YES];
-}
-
-+ (void)addGradient:(UIView *)view startColor:(UIColor *)startColor endColor:(UIColor *)endColor {
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = view.bounds;
-    gradient.colors = @[(id)startColor.CGColor, (id)endColor.CGColor];
-    [view.layer insertSublayer:gradient atIndex:0];
-    
-    [view.layer setMasksToBounds:YES];
-}
-
-+ (void)addTapGesture:(UIView *)view tapNumber:(NSInteger)num target:(id)target selector:(SEL)selector {
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:target action:selector];
-    [target setNumberOfTapsRequired:num];
-    [view addGestureRecognizer:tap];
-}
-
 #pragma mark - URLRequest
 + (void)urlRequest:(NSString *)url success:(URLRequestSuccessCallback)success error:(URLRequestErrorCallback)error {
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]] queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -217,4 +181,50 @@
     CGSize labelHeighSize = [string sizeWithFont: [UIFont fontWithName:font.fontName size:font.pointSize] constrainedToSize:maximumSize lineBreakMode:NSLineBreakByWordWrapping];
     return labelHeighSize.height;
 }
+
++ (CGRect)rectWithPadding:(CGFloat)padding parentRect:(CGRect)container {
+    return CGRectMake(padding, padding, container.size.width - padding*2, container.size.height - padding*2);
+}
+@end
+
+
+@implementation UIView (CEMKit)
+
+#pragma mark - UIView
+
+- (void)addShadowWithOffset:(CGSize)offset radius:(CGFloat)radius color:(UIColor *)color {
+    [self.layer setShadowColor:color.CGColor];
+    [self.layer setShadowRadius:radius];
+    [self.layer setShadowOffset:offset];
+    
+    [self.layer setMasksToBounds:YES];
+}
+
+- (void)addBorderWithWidth:(CGFloat)width color:(UIColor *)color {
+    [self.layer setBorderColor:color.CGColor];
+    [self.layer setBorderWidth:width];
+    
+    [self.layer setMasksToBounds:YES];
+}
+
+- (void)addCornerRadius:(CGFloat)radius {
+    [self.layer setCornerRadius:radius];
+    [self.layer setMasksToBounds:YES];
+}
+
+- (void)addGradientWithStartColor:(UIColor *)startColor endColor:(UIColor *)endColor {
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.bounds;
+    gradient.colors = @[(id)startColor.CGColor, (id)endColor.CGColor];
+    [self.layer insertSublayer:gradient atIndex:0];
+    
+    [self.layer setMasksToBounds:YES];
+}
+
+- (void)addTapGestureWithTapNumber:(NSInteger)num target:(id)target selector:(SEL)selector {
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:target action:selector];
+    [target setNumberOfTapsRequired:num];
+    [self addGestureRecognizer:tap];
+}
+
 @end

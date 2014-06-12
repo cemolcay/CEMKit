@@ -15,6 +15,7 @@
 
 #define ScreenWidth                     [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight                    [UIScreen mainScreen].bounds.size.height
+#define ScreenRect                      [UIScreen mainScreen].bounds
 
 #define NavBarHeight                    90/2
 #define StatusBarHeight                 40/2
@@ -45,16 +46,21 @@ typedef void(^JSONResponse)(id);
 + (void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message;
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message andCancelButtonTitle:(NSString *)but;
 
-+ (void)addShadow:(UIView *)view offset:(CGSize)offset radius:(CGFloat)radius color:(UIColor *)color;
-+ (void)addBorder:(UIView *)view width:(CGFloat)width color:(UIColor *)color;
-+ (void)addCornerRadius:(UIView *)view radius:(CGFloat)radius;
-+ (void)addGradient:(UIView *)view startColor:(UIColor *)startColor endColor:(UIColor *)endColor;
-+ (void)addTapGesture:(UIView *)view tapNumber:(NSInteger)num target:(id)target selector:(SEL)selector;
-
 + (void)urlRequest:(NSString *)url success:(URLRequestSuccessCallback)success error:(URLRequestErrorCallback)error;
 + (void)jsonRequest:(NSString *)url json:(JSONResponse)json error:(URLRequestErrorCallback)error;
 
 + (UIColor *)randomColor;
 + (CGFloat)labelHeightForString:(NSString*)string labelWidth:(float)width andFont:(UIFont*)font;
++ (CGRect)rectWithPadding:(CGFloat)padding parentRect:(CGRect)container;
+
+@end
+
+@interface UIView (CEMKit)
+
+- (void)addShadowWithOffset:(CGSize)offset radius:(CGFloat)radius color:(UIColor *)color;
+- (void)addBorderWithWidth:(CGFloat)width color:(UIColor *)color;
+- (void)addCornerRadius:(CGFloat)radius;
+- (void)addGradientWithStartColor:(UIColor *)startColor endColor:(UIColor *)endColor;
+- (void)addTapGestureWithTapNumber:(NSInteger)num target:(id)target selector:(SEL)selector;
 
 @end

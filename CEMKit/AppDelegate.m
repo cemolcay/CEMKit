@@ -19,6 +19,7 @@
     [self.window makeKeyAndVisible];
     
     TestViewController *test = [[TestViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:test];
     [self.window setRootViewController:test];
     
     return YES;
