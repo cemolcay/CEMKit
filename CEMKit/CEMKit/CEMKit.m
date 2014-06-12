@@ -12,6 +12,7 @@
 
 #pragma mark -
 #pragma mark UIButton
+
 + (UIButton *)buttonWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Title:(NSString *)title Font:(UIFont *)font TitleColor:(UIColor *)titleColor Image:(UIImage *)image target:(id)target selector:(SEL)selector {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(x, y, w, h)];
@@ -176,21 +177,21 @@
 }
 
 + (CGFloat)labelHeightForString:(NSString*)string labelWidth:(float)width andFont:(UIFont*)font {
-    CGSize maximumSize = CGSizeMake(width, 10000);
-    
-    CGSize labelHeighSize = [string sizeWithFont: [UIFont fontWithName:font.fontName size:font.pointSize] constrainedToSize:maximumSize lineBreakMode:NSLineBreakByWordWrapping];
-    return labelHeighSize.height;
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font}];
+    CGRect rect = [attributedText boundingRectWithSize:(CGSize){width, CGFLOAT_MAX} options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+    return rect.size.height;
 }
 
 + (CGRect)rectWithPadding:(CGFloat)padding parentRect:(CGRect)container {
     return CGRectMake(padding, padding, container.size.width - padding*2, container.size.height - padding*2);
 }
+
 @end
 
 
-@implementation UIView (CEMKit)
-
 #pragma mark - UIView
+
+@implementation UIView (CEMKit)
 
 - (void)addShadowWithOffset:(CGSize)offset radius:(CGFloat)radius color:(UIColor *)color {
     [self.layer setShadowColor:color.CGColor];

@@ -18,10 +18,14 @@
     [page addBorderWithWidth:1 color:[UIColor grayColor]];
     [self.view addSubview:page];
     
-    UIButton *but = [CEMKit buttonWithX:10 Y:10 Width:page.frame.size.width-20 Height:60 Title:@"but" Font:nil TitleColor:[UIColor whiteColor] target:self selector:@selector(buttonPress:)];
+    UIButton *but = [CEMKit buttonWithX:10 Y:10 Width:page.frame.size.width-20 Height:60 Title:@"but" Font:nil TitleColor:[UIColor blackColor] target:self selector:@selector(buttonPress:)];
     [but addCornerRadius:10];
-    [but addGradientWithStartColor:[UIColor grayColor] endColor:[UIColor blackColor]];
+    [but addGradientWithStartColor:[UIColor clearColor] endColor:[UIColor redColor]];
     [page addSubview:but];
+    
+    [CEMKit jsonRequest:@"https://www.zet.com/api/v1/produc" json:^(id object) {
+        NSLog(@"%@", object);
+    } error:nil];
 }
 
 - (void)buttonPress:(id)sender {

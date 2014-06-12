@@ -23,9 +23,9 @@
 #define RGBCOLOR(r,g,b)                 [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 #define RGBACOLOR(r,g,b,a)              [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 
-typedef void(^URLRequestSuccessCallback)(NSData*);
-typedef void(^URLRequestErrorCallback)(NSError*);
-typedef void(^JSONResponse)(id);
+typedef void(^URLRequestSuccessCallback)(NSData* data);
+typedef void(^URLRequestErrorCallback)(NSError* error);
+typedef void(^JSONResponse)(id object);
 
 @interface CEMKit : NSObject
 
