@@ -253,6 +253,23 @@
     [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, width, height)];
 }
 
+
+- (void)setX:(CGFloat)x Width:(CGFloat)width Height:(CGFloat)height {
+    [self setFrame:CGRectMake(x, self.frame.origin.y, width, height)];
+}
+
+- (void)setY:(CGFloat)y Width:(CGFloat)width Height:(CGFloat)height {
+    [self setFrame:CGRectMake(self.frame.origin.x, y, width, height)];
+}
+
+- (void)setX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)width {
+    [self setFrame:CGRectMake(x, y, width, self.frame.size.height)];
+}
+
+- (void)setX:(CGFloat)x Y:(CGFloat)y Height:(CGFloat)height {
+    [self setFrame:CGRectMake(x, y, self.frame.size.width, height)];
+}
+
 - (void)setX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)width Height:(CGFloat)height {
     [self setFrame:CGRectMake(x, y, width, height)];
 }

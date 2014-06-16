@@ -69,6 +69,13 @@ typedef void(^JSONResponse)(id object);
 - (void)setWidth:(CGFloat)width;
 - (void)setHeight:(CGFloat)height;
 - (void)setWidth:(CGFloat)width height:(CGFloat)height;
+
+- (void)setX:(CGFloat)x Width:(CGFloat)width Height:(CGFloat)height;
+- (void)setY:(CGFloat)y Width:(CGFloat)width Height:(CGFloat)height;
+
+- (void)setX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)width;
+- (void)setX:(CGFloat)x Y:(CGFloat)y Height:(CGFloat)height;
+
 - (void)setX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)width Height:(CGFloat)height;
 
 @end
