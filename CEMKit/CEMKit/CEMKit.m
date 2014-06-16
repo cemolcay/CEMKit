@@ -228,4 +228,33 @@
     [self addGestureRecognizer:tap];
 }
 
+
+- (void)setX:(CGFloat)x {
+    [self setFrame:CGRectMake(x, self.frame.origin.y, self.frame.size.width, self.frame.size.height)];
+}
+
+- (void)setY:(CGFloat)y {
+    [self setFrame:CGRectMake(self.frame.origin.x, y, self.frame.size.width, self.frame.size.height)];
+}
+
+- (void)setX:(CGFloat)x Y:(CGFloat)y {
+    [self setFrame:CGRectMake(x, y, self.frame.size.width, self.frame.size.height)];
+}
+
+- (void)setWidth:(CGFloat)width {
+    [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, width, self.frame.size.height)];
+}
+
+- (void)setHeight:(CGFloat)height {
+    [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height)];
+}
+
+- (void)setWidth:(CGFloat)width height:(CGFloat)height {
+    [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, width, height)];
+}
+
+- (void)setX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)width Height:(CGFloat)height {
+    [self setFrame:CGRectMake(x, y, width, height)];
+}
+
 @end

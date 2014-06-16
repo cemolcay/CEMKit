@@ -63,4 +63,12 @@ typedef void(^JSONResponse)(id object);
 - (void)addGradientWithStartColor:(UIColor *)startColor endColor:(UIColor *)endColor;
 - (void)addTapGestureWithTapNumber:(NSInteger)num target:(id)target selector:(SEL)selector;
 
+- (void)setX:(CGFloat)x;
+- (void)setY:(CGFloat)y;
+- (void)setX:(CGFloat)x Y:(CGFloat)y;
+- (void)setWidth:(CGFloat)width;
+- (void)setHeight:(CGFloat)height;
+- (void)setWidth:(CGFloat)width height:(CGFloat)height;
+- (void)setX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)width Height:(CGFloat)height;
+
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>06C90105-FE94-4491-80EA-F764C52C4D0B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CEMKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>792B5333-5EA7-4489-B71A-19E92980AE32</key>
+		<string>https://github.com/cemolcay/CEMKit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CEMKit.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>792B5333-5EA7-4489-B71A-19E92980AE32</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cemolcay/CEMKit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>792B5333-5EA7-4489-B71A-19E92980AE32</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>792B5333-5EA7-4489-B71A-19E92980AE32</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CEMKit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
