@@ -13,15 +13,17 @@
 - (void)loadView {
     self.view = [[UIView alloc] initWithFrame:ScreenRect];
     
-    UIView *page = [[UIView alloc] initWithFrame:[CEMKit rectWithPadding:10 parentRect:ScreenRect]];
-    [page addCornerRadius:10];
-    [page addBorderWithWidth:1 color:[UIColor grayColor]];
-    [self.view addSubview:page];
+    UIView *circleFill = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
+    [circleFill drawCircleWithColor:[CEMKit randomColor]];
+    [self.view addSubview:circleFill];
     
-    UIButton *but = [CEMKit buttonWithX:10 Y:10 Width:page.frame.size.width-20 Height:60 Title:@"but" Font:nil TitleColor:[UIColor blackColor] target:self selector:@selector(buttonPress:)];
-    [but addCornerRadius:10];
-    [but addGradientWithStartColor:[UIColor clearColor] endColor:[UIColor redColor]];
-    [page addSubview:but];
+    UIView *circleStroke = [[UIView alloc] initWithFrame:CGRectMake(10, 70, 50, 50)];
+    [circleStroke drawCircleStrokeWithColor:[CEMKit randomColor] width:2];
+    [self.view addSubview:circleStroke];
+    
+    UIView *circleFillStroke = [[UIView alloc] initWithFrame:CGRectMake(10, 130, 50, 50)];
+    [circleFillStroke drawCircleWithColor:[CEMKit randomColor] strokeColor:[CEMKit randomColor] width:5];
+    [self.view addSubview:circleFillStroke];
 }
 
 - (void)buttonPress:(id)sender {

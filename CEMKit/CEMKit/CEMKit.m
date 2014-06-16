@@ -229,6 +229,40 @@
 }
 
 
+- (void)drawCircleWithColor:(UIColor *)circleColor {
+    CGFloat radius = self.frame.size.width/2;
+    
+    CAShapeLayer *circleLayer = [CAShapeLayer layer];
+    [circleLayer setPath:[[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 2*radius, 2*radius) cornerRadius:radius] CGPath]];
+    [circleLayer setFillColor:[circleColor CGColor]];
+    [self.layer addSublayer:circleLayer];
+}
+
+- (void)drawCircleStrokeWithColor:(UIColor *)strokeColor width:(CGFloat)width {
+    CGFloat radius = self.frame.size.width/2;
+    
+    CAShapeLayer *circleLayer = [CAShapeLayer layer];
+    [circleLayer setPath:[[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 2*radius, 2*radius) cornerRadius:radius] CGPath]];
+    [circleLayer setFillColor:[[UIColor clearColor] CGColor]];
+    [circleLayer setStrokeColor:[strokeColor CGColor]];
+    [circleLayer setLineWidth:width];
+    [circleLayer setLineCap:kCALineCapRound];
+    [self.layer addSublayer:circleLayer];
+}
+
+- (void)drawCircleWithColor:(UIColor *)circleColor strokeColor:(UIColor *)strokeColor width:(CGFloat)width {
+    CGFloat radius = self.frame.size.width/2;
+    
+    CAShapeLayer *circleLayer = [CAShapeLayer layer];
+    [circleLayer setPath:[[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 2*radius, 2*radius) cornerRadius:radius] CGPath]];
+    [circleLayer setFillColor:[circleColor CGColor]];
+    [circleLayer setStrokeColor:[strokeColor CGColor]];
+    [circleLayer setLineWidth:width];
+    [circleLayer setLineCap:kCALineCapRound];
+    [self.layer addSublayer:circleLayer];
+}
+
+
 - (void)setX:(CGFloat)x {
     [self setFrame:CGRectMake(x, self.frame.origin.y, self.frame.size.width, self.frame.size.height)];
 }
