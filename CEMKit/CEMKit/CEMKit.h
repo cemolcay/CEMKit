@@ -41,6 +41,8 @@ typedef void(^JSONResponse)(id object);
 + (UIImageView *)imageViewWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Url:(NSString *)url;
 + (UIImageView *)imageViewWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Url:(NSString *)url Placeholder:(UIImage *)placeholder;
 
++ (UITextField *)textFieldWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Background:(UIColor *)bg Placeholder:(NSString *)placeholder Font:(UIFont *)font TextColor:(UIColor *)textColor;
+
 + (UIActivityIndicatorView *)activityIndicatorWithCenter:(CGPoint)center style:(UIActivityIndicatorViewStyle)style startAnimating:(BOOL)animating;
 
 + (void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message;

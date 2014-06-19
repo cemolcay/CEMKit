@@ -24,6 +24,10 @@
     UIView *circleFillStroke = [[UIView alloc] initWithFrame:CGRectMake(10, 130, 50, 50)];
     [circleFillStroke drawCircleWithColor:[CEMKit randomColor] strokeColor:[CEMKit randomColor] width:5];
     [self.view addSubview:circleFillStroke];
+    
+    UIView *semi = [[UIView alloc] initWithFrame:CGRectMake(10, 190, 50, 50)];
+    [semi drawSemiCircleWithStartAngle:DEGREES_TO_RADIANS(0) endAngle:DEGREES_TO_RADIANS(100)];
+    [self.view addSubview:semi];
 }
 
 - (void)buttonPress:(id)sender {

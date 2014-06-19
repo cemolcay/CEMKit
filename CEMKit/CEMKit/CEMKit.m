@@ -113,6 +113,16 @@
     return img;
 }
 
+#pragma mark UITextField
++ (UITextField *)textFieldWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Background:(UIColor *)bg Placeholder:(NSString *)placeholder Font:(UIFont *)font TextColor:(UIColor *)textColor {
+    UITextField *text = [[UITextField alloc] initWithFrame:CGRectMake(x, y, w, h)];
+    [text setBackgroundColor:bg];
+    [text setFont:font];
+    [text setPlaceholder:placeholder];
+    [text setTextColor:textColor];
+    return text;
+}
+
 #pragma mark UIActivityIndicatorView
 + (UIActivityIndicatorView *)activityIndicatorWithCenter:(CGPoint)center style:(UIActivityIndicatorViewStyle)style startAnimating:(BOOL)animating {
     UIActivityIndicatorView *act = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:style];
@@ -138,7 +148,7 @@
 
 #pragma mark - URLRequest
 + (void)urlRequest:(NSString *)url success:(URLRequestSuccessCallback)success error:(URLRequestErrorCallback)error {
-    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]] queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]] queue:[NSOperationQueue currentQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         if (connectionError) {
             if (error)
             error (connectionError);
@@ -224,8 +234,10 @@
 
 - (void)addTapGestureWithTapNumber:(NSInteger)num target:(id)target selector:(SEL)selector {
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:target action:selector];
-    [target setNumberOfTapsRequired:num];
+    [tap setNumberOfTapsRequired:num];
     [self addGestureRecognizer:tap];
+    
+    [self setUserInteractionEnabled:YES];
 }
 
 
