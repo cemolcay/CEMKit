@@ -10,29 +10,29 @@
 	<string>CEMKit</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>792B5333-5EA7-4489-B71A-19E92980AE32</key>
+		<key>D2C10794D37B886CF742150B6E3CE0C20A5603FE</key>
 		<string>https://github.com/cemolcay/CEMKit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CEMKit.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>792B5333-5EA7-4489-B71A-19E92980AE32</key>
+		<key>D2C10794D37B886CF742150B6E3CE0C20A5603FE</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/cemolcay/CEMKit.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>792B5333-5EA7-4489-B71A-19E92980AE32</string>
+	<string>D2C10794D37B886CF742150B6E3CE0C20A5603FE</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>792B5333-5EA7-4489-B71A-19E92980AE32</string>
+			<string>D2C10794D37B886CF742150B6E3CE0C20A5603FE</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CEMKit</string>
 		</dict>

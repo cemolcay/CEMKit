@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 #import "AppDelegate.h"
+#import "UIView+CEMKit.h"
 
 #define APPDELEGATE                     ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 #define DEGREES_TO_RADIANS(x)           (M_PI * x / 180.0)
@@ -33,55 +35,33 @@ typedef void(^JSONResponse)(id object);
 + (UIButton *)buttonWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Title:(NSString *)title Font:(UIFont *)font TitleColor:(UIColor *)titleColor  target:(id)target selector:(SEL)selector;
 + (UIButton *)buttonWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Image:(UIImage *)image target:(id)target selector:(SEL)selector;
 
+
 + (UILabel *)labelWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Text:(NSString *)text TextColor:(UIColor *)textColor Font:(UIFont *)font Alignment:(NSTextAlignment)alignment NumberOfLines:(NSInteger)num;
 + (UILabel *)labelWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Font:(UIFont *)font Text:(NSString *)text TextColor:(UIColor *)textColor Alignment:(NSTextAlignment)alignment;
+
 
 + (UIImageView *)imageViewWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Image:(UIImage *)image;
 + (UIImageView *)imageViewWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Image:(UIImage *)image ContentMode:(UIViewContentMode)mode;
 + (UIImageView *)imageViewWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Url:(NSString *)url;
 + (UIImageView *)imageViewWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Url:(NSString *)url Placeholder:(UIImage *)placeholder;
 
+
 + (UITextField *)textFieldWithX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)w Height:(CGFloat)h Background:(UIColor *)bg Placeholder:(NSString *)placeholder Font:(UIFont *)font TextColor:(UIColor *)textColor;
+
 
 + (UIActivityIndicatorView *)activityIndicatorWithCenter:(CGPoint)center style:(UIActivityIndicatorViewStyle)style startAnimating:(BOOL)animating;
 
+
 + (void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message;
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message andCancelButtonTitle:(NSString *)but;
+
 
 + (void)urlRequest:(NSString *)url success:(URLRequestSuccessCallback)success error:(URLRequestErrorCallback)error;
 + (void)jsonRequest:(NSString *)url json:(JSONResponse)json error:(URLRequestErrorCallback)error;
 
 + (UIColor *)randomColor;
++ (void)setHeightForLabel:(UILabel *)label;
 + (CGFloat)labelHeightForString:(NSString*)string labelWidth:(float)width andFont:(UIFont*)font;
 + (CGRect)rectWithPadding:(CGFloat)padding parentRect:(CGRect)container;
-
-@end
-
-@interface UIView (CEMKit)
-
-- (void)addShadowWithOffset:(CGSize)offset radius:(CGFloat)radius color:(UIColor *)color;
-- (void)addBorderWithWidth:(CGFloat)width color:(UIColor *)color;
-- (void)addCornerRadius:(CGFloat)radius;
-- (void)addGradientWithStartColor:(UIColor *)startColor endColor:(UIColor *)endColor;
-- (void)addTapGestureWithTapNumber:(NSInteger)num target:(id)target selector:(SEL)selector;
-
-- (void)drawCircleWithColor:(UIColor *)circleColor;
-- (void)drawCircleStrokeWithColor:(UIColor *)strokeColor width:(CGFloat)width;
-- (void)drawCircleWithColor:(UIColor *)circleColor strokeColor:(UIColor *)strokeColor width:(CGFloat)width;
-
-- (void)setX:(CGFloat)x;
-- (void)setY:(CGFloat)y;
-- (void)setX:(CGFloat)x Y:(CGFloat)y;
-- (void)setWidth:(CGFloat)width;
-- (void)setHeight:(CGFloat)height;
-- (void)setWidth:(CGFloat)width height:(CGFloat)height;
-
-- (void)setX:(CGFloat)x Width:(CGFloat)width Height:(CGFloat)height;
-- (void)setY:(CGFloat)y Width:(CGFloat)width Height:(CGFloat)height;
-
-- (void)setX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)width;
-- (void)setX:(CGFloat)x Y:(CGFloat)y Height:(CGFloat)height;
-
-- (void)setX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)width Height:(CGFloat)height;
 
 @end
