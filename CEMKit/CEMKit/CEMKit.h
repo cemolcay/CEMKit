@@ -12,18 +12,6 @@
 #import "UIView+CEMKit.h"
 #import "AppDelegate.h"
 
-#define APPDELEGATE                     ((AppDelegate*)[[UIApplication sharedApplication] delegate])
-#define DEGREES_TO_RADIANS(x)           (M_PI * x / 180.0)
-
-#define ScreenWidth                     [UIScreen mainScreen].bounds.size.width
-#define ScreenHeight                    [UIScreen mainScreen].bounds.size.height
-
-
-#define NavBarHeight                    90/2
-#define StatusBarHeight                 40/2
-
-#define RGBCOLOR(r,g,b)                 [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
-#define RGBACOLOR(r,g,b,a)              [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 
 typedef void(^URLRequestSuccessCallback)(NSData* data);
 typedef void(^URLRequestErrorCallback)(NSError* error);
