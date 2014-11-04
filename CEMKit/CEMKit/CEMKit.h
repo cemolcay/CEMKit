@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 #import "UIView+CEMKit.h"
-
 #import "AppDelegate.h"
-#define APPDELEGATE                     ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 
+#define APPDELEGATE                     ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 #define DEGREES_TO_RADIANS(x)           (M_PI * x / 180.0)
 
 #define ScreenWidth                     [UIScreen mainScreen].bounds.size.width

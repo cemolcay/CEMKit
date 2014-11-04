@@ -12,10 +12,6 @@ Pod::Spec.new do |s|
     }
 
     s.platform     = :ios, '7.0'
-    s.source_files = 'CEMKit/*.{h,m}'
+    s.source_files = 'CEMKit/CEMKit/*.{h,m}'
     s.requires_arc = true
-
-    s.subspec 'CEMKit' do |ss|
-        ss.source_files = 'CEMKit/CEMKit/*.{h,m}'
-    end
 end
