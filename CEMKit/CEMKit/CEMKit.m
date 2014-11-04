@@ -9,7 +9,7 @@
 #import "CEMKit.h"
 
 #define APPDELEGATE                     ((AppDelegate*)[[UIApplication sharedApplication] delegate])
-#define DEGREES_TO_RADIANS(x)           (M_PI * x / 180.0)
+#define DEGREES_RADIANS(angle)          ((angle) / 180.0 * M_PI)
 
 #define ScreenWidth                     [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight                    [UIScreen mainScreen].bounds.size.height
