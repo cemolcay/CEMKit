@@ -17,7 +17,7 @@
 
 #define ScreenWidth                     [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight                    [UIScreen mainScreen].bounds.size.height
-#define ScreenRect                      [UIScreen mainScreen].bounds
+
 
 #define NavBarHeight                    90/2
 #define StatusBarHeight                 40/2
