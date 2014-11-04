@@ -12,7 +12,7 @@
 @implementation TestViewController
 
 - (void)loadView {
-    self.view = [[UIView alloc] initWithFrame:ScreenRect];
+    self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     
 }
