@@ -14,7 +14,7 @@
 		<string>https://github.com/cemolcay/CEMKit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CEMKit.xcodeproj/project.xcworkspace</string>
+	<string>CEMKit.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D2C10794D37B886CF742150B6E3CE0C20A5603FE</key>

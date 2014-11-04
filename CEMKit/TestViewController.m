@@ -7,6 +7,7 @@
 //
 
 #import "TestViewController.h"
+#import "CEMKit.h"
 
 @implementation TestViewController
 
