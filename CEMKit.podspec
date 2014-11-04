@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.source_files = 'CEMKit/*.{h,m}'
     s.requires_arc = true
 
-    s.subspec 'CEMKit' |ss| do
+    s.subspec 'CEMKit' do |ss|
         ss.source_files = 'CEMKit/CEMKit/*.{h,m}'
     end
 end
