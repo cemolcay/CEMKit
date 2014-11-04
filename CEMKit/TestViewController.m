@@ -7,14 +7,8 @@
 //
 
 #import "TestViewController.h"
-#import "CEMKit.h"
 
 @implementation TestViewController
 
-- (void)loadView {
-    self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    
-}
 
 @end
