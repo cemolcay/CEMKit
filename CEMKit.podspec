@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     }
 
     s.platform     = :ios, '7.0'
-    s.source_files = 'CEMKit/CEMKit/*.{h,m}', 'CEMKit/*.{h,m}'
+    s.source_files = 'CEMKit/CEMKit/*.{h,m}'
     s.requires_arc = true
     s.frameworks   = 'Foundation'
 end

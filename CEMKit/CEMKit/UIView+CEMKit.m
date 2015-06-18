@@ -10,8 +10,152 @@
 
 @implementation UIView (CEMKit)
 
+#pragma mark - Init
 
-#pragma mark Layer Extensions
+- (instancetype)initWithX:(CGFloat)x y:(CGFloat)y w:(CGFloat)w h:(CGFloat)h {
+    return [self initWithFrame:CGRectMake(x, y, w, h)];
+}
+
+
+#pragma mark - Frame
+
+- (CGFloat)x {
+    return self.frame.origin.x;
+}
+
+- (void)setX:(CGFloat)x {
+    CGRect rect = self.frame;
+    rect.origin.x = x;
+    self.frame = rect;
+}
+
+
+- (CGFloat)y {
+    return self.frame.origin.y;
+}
+
+- (void)setY:(CGFloat)y {
+    CGRect rect = self.frame;
+    rect.origin.y = y;
+    self.frame = rect;
+}
+
+
+- (CGFloat)width {
+    return self.frame.size.width;
+}
+
+- (void)setWidth:(CGFloat)width {
+    CGRect rect = self.frame;
+    rect.size.width = width;
+    self.frame = rect;
+}
+
+
+- (CGFloat)height {
+    return self.frame.size.height;
+}
+
+- (void)setHeight:(CGFloat)height {
+    CGRect rect = self.frame;
+    rect.size.height = height;
+    self.frame = rect;
+}
+
+
+- (CGFloat)left {
+    return [self x];
+}
+
+- (void)setLeft:(CGFloat)left {
+    CGRect rect = self.frame;
+    rect.origin.x = left;
+    self.frame = rect;
+}
+
+
+- (CGFloat)right {
+    return [self x] + [self width];
+}
+
+- (void)setRight:(CGFloat)right {
+    CGRect rect = self.frame;
+    rect.origin.x = right - [self width];
+    self.frame = rect;
+}
+
+
+- (CGFloat)top {
+    return [self y];
+}
+
+- (void)setTop:(CGFloat)top {
+    CGRect rect = self.frame;
+    rect.origin.y = top;
+    self.frame = rect;
+}
+
+
+- (CGFloat)bottom {
+    return [self y] + [self height];
+}
+
+- (void)setBottom:(CGFloat)bottom {
+    CGRect rect = self.frame;
+    rect.origin.y = bottom - [self height];
+    self.frame = rect;
+}
+
+
+- (CGPoint)position {
+    return self.frame.origin;
+}
+
+- (void)setPosition:(CGPoint)position {
+    CGRect rect = self.frame;
+    rect.origin = position;
+    self.frame = rect;
+}
+
+
+- (CGSize)size {
+    return self.frame.size;
+}
+
+- (void)setSize:(CGSize)size {
+    CGRect rect = self.frame;
+    rect.size = size;
+    self.frame = rect;
+}
+
+- (CGFloat)leftWithOffset:(CGFloat)offset {
+    return [self left] - offset;
+}
+
+- (CGFloat)rightWithOffset:(CGFloat)offset {
+    return [self right] + offset;
+}
+
+- (CGFloat)topWithOffset:(CGFloat)offset {
+    return [self top] - offset;
+}
+
+- (CGFloat)bottomWithOffset:(CGFloat)offset {
+    return [self bottom] + offset;
+}
+
+
+- (void)centerInSuperview {
+    
+    if (self.superview == nil) {
+        return;
+    }
+    
+    [self setCenter:CGPointMake(self.superview.width/2, self.superview.height/2)];
+}
+
+
+#pragma mark - Layer
 
 - (void)setShadowWithOffset:(CGSize)offset radius:(CGFloat)radius color:(UIColor *)color {
     [self.layer setShadowColor:color.CGColor];
@@ -96,8 +240,7 @@
 }
 
 
-
-#pragma mark Transform Extensions
+#pragma mark - Transform
 
 - (void)setRotationX:(CGFloat)rotX {
     CATransform3D transform = CATransform3DIdentity;
@@ -123,7 +266,6 @@
     self.layer.transform = transform;
 }
 
-
 - (void)setRotationX:(CGFloat)rotX rotationY:(CGFloat)rotY rotationZ:(CGFloat)rotZ {
     CATransform3D transform = CATransform3DIdentity;
 
@@ -135,7 +277,6 @@
     self.layer.transform = transform;
 }
 
-
 - (void)setScaleX:(CGFloat)x scaleY:(CGFloat)y scaleZ:(CGFloat)z {
     CATransform3D transform = CATransform3DIdentity;
     
@@ -146,108 +287,7 @@
 }
 
 
-
-#pragma mark Rect Extensions
-
-- (CGFloat)x {
-    return self.frame.origin.x;
-}
-
-- (CGFloat)y {
-    return self.frame.origin.y;
-}
-
-- (CGFloat)width {
-    return self.frame.size.width;
-}
-
-- (CGFloat)height {
-    return self.frame.size.height;
-}
-
-
-- (CGFloat)left {
-    return [self x];
-}
-
-- (CGFloat)right {
-    return [self x] + [self width];
-}
-
-- (CGFloat)top {
-    return [self y];
-}
-
-- (CGFloat)bottom {
-    return [self y] + [self height];
-}
-
-
-- (CGFloat)leftWithOffset:(CGFloat)offset {
-    return [self left] - offset;
-}
-
-- (CGFloat)rightWithOffset:(CGFloat)offset {
-    return [self right] + offset;
-}
-
-- (CGFloat)topWithOffset:(CGFloat)offset {
-    return [self top] - offset;
-}
-
-- (CGFloat)bottomWithOffset:(CGFloat)offset {
-    return [self bottom] + offset;
-}
-
-
-- (void)setX:(CGFloat)x {
-    [self setFrame:CGRectMake(x, self.frame.origin.y, self.frame.size.width, self.frame.size.height)];
-}
-
-- (void)setY:(CGFloat)y {
-    [self setFrame:CGRectMake(self.frame.origin.x, y, self.frame.size.width, self.frame.size.height)];
-}
-
-- (void)setX:(CGFloat)x Y:(CGFloat)y {
-    [self setFrame:CGRectMake(x, y, self.frame.size.width, self.frame.size.height)];
-}
-
-- (void)setWidth:(CGFloat)width {
-    [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, width, self.frame.size.height)];
-}
-
-- (void)setHeight:(CGFloat)height {
-    [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height)];
-}
-
-- (void)setWidth:(CGFloat)width height:(CGFloat)height {
-    [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, width, height)];
-}
-
-
-- (void)setX:(CGFloat)x Width:(CGFloat)width Height:(CGFloat)height {
-    [self setFrame:CGRectMake(x, self.frame.origin.y, width, height)];
-}
-
-- (void)setY:(CGFloat)y Width:(CGFloat)width Height:(CGFloat)height {
-    [self setFrame:CGRectMake(self.frame.origin.x, y, width, height)];
-}
-
-- (void)setX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)width {
-    [self setFrame:CGRectMake(x, y, width, self.frame.size.height)];
-}
-
-- (void)setX:(CGFloat)x Y:(CGFloat)y Height:(CGFloat)height {
-    [self setFrame:CGRectMake(x, y, self.frame.size.width, height)];
-}
-
-- (void)setX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)width Height:(CGFloat)height {
-    [self setFrame:CGRectMake(x, y, width, height)];
-}
-
-
-
-#pragma mark Gesture Extensions
+#pragma mark - Gesture
 
 - (void)addTapGestureWithTapNumber:(NSInteger)num target:(id)target selector:(SEL)selector {
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:target action:selector];
@@ -272,5 +312,41 @@
     [self setUserInteractionEnabled:YES];
     [self addGestureRecognizer:pan];
 }
+
+
+#pragma mark - Animations
+
++ (void)springWithDuration:(NSTimeInterval)duration animations:(void(^)(void))animations completion:(void(^)(BOOL))completion {
+    [self animateWithDuration:duration delay:0 usingSpringWithDamping:1 initialSpringVelocity:0 options:kNilOptions animations:animations completion:completion];
+}
+
++ (void)springWithDuration:(NSTimeInterval)duration damping:(CGFloat)damping velocity:(CGFloat)velocity animations:(void (^)(void))animations completion:(void(^)(BOOL))completion {
+    [self animateWithDuration:duration delay:0 usingSpringWithDamping:damping initialSpringVelocity:velocity options:kNilOptions animations:animations completion:completion];
+}
+
+
+- (void)fadeIn {
+    [self fadeInWithDuration:0.3];
+}
+
+- (void)fadeOut {
+    [self fadeOutWithDuration:0.3];
+}
+
+
+- (void)fadeInWithDuration:(NSTimeInterval)duration {
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:duration animations:^{
+        [weakSelf setAlpha:1];
+    }];
+}
+
+- (void)fadeOutWithDuration:(NSTimeInterval)duration {
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:duration animations:^{
+        [weakSelf setAlpha:0];
+    }];
+}
+
 
 @end

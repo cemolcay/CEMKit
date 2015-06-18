@@ -7,8 +7,39 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <objc/runtime.h>
 
 @interface UIView (CEMKit)
+
+#pragma mark - Init
+
+- (instancetype)initWithX:(CGFloat)x y:(CGFloat)y w:(CGFloat)w h:(CGFloat)h;
+
+
+#pragma mark - Frame
+
+@property (nonatomic, assign) CGFloat x;
+@property (nonatomic, assign) CGFloat y;
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat height;
+
+@property (nonatomic, assign) CGFloat left;
+@property (nonatomic, assign) CGFloat right;
+@property (nonatomic, assign) CGFloat top;
+@property (nonatomic, assign) CGFloat bottom;
+
+@property (nonatomic, assign) CGPoint position;
+@property (nonatomic, assign) CGSize size;
+
+
+- (CGFloat)leftWithOffset:(CGFloat)offset;
+- (CGFloat)rightWithOffset:(CGFloat)offset;
+- (CGFloat)topWithOffset:(CGFloat)offset;
+- (CGFloat)bottomWithOffset:(CGFloat)offset;
+
+- (void)centerInSuperview;
+
+#pragma mark - Layer
 
 - (void)setShadowWithOffset:(CGSize)offset radius:(CGFloat)radius color:(UIColor *)color;
 - (void)setBorderWithWidth:(CGFloat)width andColor:(UIColor *)color;
@@ -22,32 +53,8 @@
 
 - (void)drawArcFromAngle:(CGFloat)fromAngle toAngle:(CGFloat)toAngle clockwise:(BOOL)clockwise color:(UIColor *)arcColor width:(CGFloat)lineWidth lineCap:(NSString *)kCALineCap;
 
-- (CGFloat)x;
-- (CGFloat)y;
-- (CGFloat)width;
-- (CGFloat)height;
 
-- (CGFloat)left;
-- (CGFloat)right;
-- (CGFloat)top;
-- (CGFloat)bottom;
-
-- (CGFloat)leftWithOffset:(CGFloat)offset;
-- (CGFloat)rightWithOffset:(CGFloat)offset;
-- (CGFloat)topWithOffset:(CGFloat)offset;
-- (CGFloat)bottomWithOffset:(CGFloat)offset;
-
-
-- (void)setX:(CGFloat)x;
-- (void)setY:(CGFloat)y;
-- (void)setX:(CGFloat)x Y:(CGFloat)y;
-
-- (void)setWidth:(CGFloat)width;
-- (void)setHeight:(CGFloat)height;
-- (void)setWidth:(CGFloat)width height:(CGFloat)height;
-
-- (void)setX:(CGFloat)x Y:(CGFloat)y Width:(CGFloat)width Height:(CGFloat)height;
-
+#pragma mark - Transform
 
 - (void)setRotationX:(CGFloat)rotX;
 - (void)setRotationY:(CGFloat)rotY;
@@ -58,8 +65,22 @@
 - (void)setScaleX:(CGFloat)x scaleY:(CGFloat)y scaleZ:(CGFloat)z;
 
 
+#pragma mark - Gestures
+
 - (void)addTapGestureWithTapNumber:(NSInteger)num target:(id)target selector:(SEL)selector;
 - (void)addSwipeGestureWithDirection:(UISwipeGestureRecognizerDirection)direction numberOfTouches:(NSInteger)touches target:(id)target selector:(SEL)selector;
 - (void)addPanGestureWithTarget:(id)target selector:(SEL)selector;
+
+
+#pragma mark - Animation
+
++ (void)springWithDuration:(NSTimeInterval)duration animations:(void(^)(void))animations completion:(void(^)(BOOL))completion;
++ (void)springWithDuration:(NSTimeInterval)duration damping:(CGFloat)damping velocity:(CGFloat)velocity animations:(void (^)(void))animations completion:(void(^)(BOOL))completion;
+
+- (void)fadeIn;
+- (void)fadeOut;
+
+- (void)fadeInWithDuration:(NSTimeInterval)duration;
+- (void)fadeOutWithDuration:(NSTimeInterval)duration;
 
 @end
