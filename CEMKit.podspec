@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "CEMKit"
-    s.version      = "1.0.1"
+    s.version      = "1.0.3"
     s.summary      = "handy library for no-xibbers"
     s.homepage     = "https://github.com/cemolcay/CEMKit"
 
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
     s.author       = { "Cem Olcay" => "ccemolcay@gmail.com" }
     s.source       = {
         :git => "https://github.com/cemolcay/CEMKit.git",
-        :tag => "1.0.1"
+        :tag => "1.0.3"
     }
 
     s.platform     = :ios, '7.0'
