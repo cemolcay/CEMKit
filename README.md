@@ -26,5 +26,6 @@ Extensions
 * UIButton+CEMKit
 * UIImageView+CEMKit
 * UIColor+CEMKit
+* UIBarButtonItem+CEMKit
 * NSURLConnection+CEMKit
 * NSAttributedString+CEMKit

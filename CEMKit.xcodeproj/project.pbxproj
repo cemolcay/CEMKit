@@ -29,6 +29,7 @@
 		B27E4F1E1B32C3DB00151E29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27E4F1D1B32C3DB00151E29 /* Main.storyboard */; };
 		B27E4F651B32C61E00151E29 /* NSAttributedString+CEMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E4F621B32C61E00151E29 /* NSAttributedString+CEMKit.m */; };
 		B27E4F661B32C61E00151E29 /* UIScrollView+CEMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E4F641B32C61E00151E29 /* UIScrollView+CEMKit.m */; };
+		B27E4F691B32C79800151E29 /* UIBarButtonItem+CEMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E4F681B32C79800151E29 /* UIBarButtonItem+CEMKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		B27E4F621B32C61E00151E29 /* NSAttributedString+CEMKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+CEMKit.m"; path = "CEMKit/NSAttributedString+CEMKit.m"; sourceTree = "<group>"; };
 		B27E4F631B32C61E00151E29 /* UIScrollView+CEMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+CEMKit.h"; path = "CEMKit/UIScrollView+CEMKit.h"; sourceTree = "<group>"; };
 		B27E4F641B32C61E00151E29 /* UIScrollView+CEMKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+CEMKit.m"; path = "CEMKit/UIScrollView+CEMKit.m"; sourceTree = "<group>"; };
+		B27E4F671B32C79800151E29 /* UIBarButtonItem+CEMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+CEMKit.h"; path = "CEMKit/UIBarButtonItem+CEMKit.h"; sourceTree = "<group>"; };
+		B27E4F681B32C79800151E29 /* UIBarButtonItem+CEMKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+CEMKit.m"; path = "CEMKit/UIBarButtonItem+CEMKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +201,8 @@
 				B27E4F0F1B32BAD100151E29 /* NSURLConnection+CEMKIt.m */,
 				B27E4F611B32C61E00151E29 /* NSAttributedString+CEMKit.h */,
 				B27E4F621B32C61E00151E29 /* NSAttributedString+CEMKit.m */,
+				B27E4F671B32C79800151E29 /* UIBarButtonItem+CEMKit.h */,
+				B27E4F681B32C79800151E29 /* UIBarButtonItem+CEMKit.m */,
 			);
 			name = CEMKit;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				B25B05E31A03A87E0072A231 /* UIView+CEMKit.m in Sources */,
 				B27E4F171B32BAD100151E29 /* UIButton+CEMKit.m in Sources */,
 				B234270419488A0000A0D11C /* main.m in Sources */,
+				B27E4F691B32C79800151E29 /* UIBarButtonItem+CEMKit.m in Sources */,
 				B27E4F191B32BAD100151E29 /* UIImageView+CEMKit.m in Sources */,
 				B27E4F661B32C61E00151E29 /* UIScrollView+CEMKit.m in Sources */,
 			);
