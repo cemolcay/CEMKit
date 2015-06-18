@@ -3,7 +3,9 @@
 //  CEMKit
 //
 //  Created by Cem Olcay on 11/06/14.
-//  Copyright (c) 2014 studionord. All rights reserved.
+//  Copyright (c) 2014 cemolcay. All rights reserved.
+//
+//  https://www.github.com/cemolcay/CEMKit
 //
 
 #import <Foundation/Foundation.h>
