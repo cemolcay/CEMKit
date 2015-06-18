@@ -30,6 +30,16 @@
                                 }]
                                 textAlignment:NSTextAlignmentLeft];
     [self.view addSubview:otr];
+    
+    UIButton *but = [[UIButton alloc] initWithFrame:CGRectMake(20, [otr bottomWithOffset:10], 60, 44)
+                                              title:@"button"
+                                         titleColor:[UIColor blueColor]
+                                               font:[UIFont italicSystemFontOfSize:15]
+                                    backgroundColor:[UIColor brownColor]
+                                             action:^(UIButton *sender) {
+                                                NSLog(@"button pressed");
+                                             }];
+    [self.view addSubview:but];
 }
 
 @end
