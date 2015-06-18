@@ -27,8 +27,4 @@
 #import "NSURLConnection+CEMKIt.h"
 #import "UIImageView+CEMKit.h"
 #import "UIButton+CEMKit.h"
-
-@interface CEMKit : NSObject
-
-
-@end
+#import "NSAttributedString+CEMKit.h"

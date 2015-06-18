@@ -20,13 +20,14 @@
 		B234271B19488A0000A0D11C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B234271919488A0000A0D11C /* InfoPlist.strings */; };
 		B234271D19488A0000A0D11C /* CEMKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B234271C19488A0000A0D11C /* CEMKitTests.m */; };
 		B234272919488A1B00A0D11C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B234272819488A1B00A0D11C /* TestViewController.m */; };
-		B234272C19488A3600A0D11C /* CEMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B234272B19488A3600A0D11C /* CEMKit.m */; };
 		B25B05E31A03A87E0072A231 /* UIView+CEMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B25B05E21A03A87E0072A231 /* UIView+CEMKit.m */; };
 		B27E4EFE1B32A93100151E29 /* UILabel+CEMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E4EFD1B32A93100151E29 /* UILabel+CEMKit.m */; };
 		B27E4F161B32BAD100151E29 /* NSURLConnection+CEMKIt.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E4F0F1B32BAD100151E29 /* NSURLConnection+CEMKIt.m */; };
 		B27E4F171B32BAD100151E29 /* UIButton+CEMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E4F111B32BAD100151E29 /* UIButton+CEMKit.m */; };
 		B27E4F181B32BAD100151E29 /* UIColor+CEMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E4F131B32BAD100151E29 /* UIColor+CEMKit.m */; };
 		B27E4F191B32BAD100151E29 /* UIImageView+CEMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E4F151B32BAD100151E29 /* UIImageView+CEMKit.m */; };
+		B27E4F1C1B32BB9900151E29 /* NSAttributedString+CEMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E4F1B1B32BB9900151E29 /* NSAttributedString+CEMKit.m */; };
+		B27E4F1E1B32C3DB00151E29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27E4F1D1B32C3DB00151E29 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +60,6 @@
 		B234272719488A1B00A0D11C /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		B234272819488A1B00A0D11C /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		B234272A19488A3600A0D11C /* CEMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CEMKit.h; path = CEMKit/CEMKit.h; sourceTree = "<group>"; };
-		B234272B19488A3600A0D11C /* CEMKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CEMKit.m; path = CEMKit/CEMKit.m; sourceTree = "<group>"; };
 		B25B05E11A03A87E0072A231 /* UIView+CEMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+CEMKit.h"; path = "CEMKit/UIView+CEMKit.h"; sourceTree = "<group>"; };
 		B25B05E21A03A87E0072A231 /* UIView+CEMKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+CEMKit.m"; path = "CEMKit/UIView+CEMKit.m"; sourceTree = "<group>"; };
 		B27E4EFC1B32A93100151E29 /* UILabel+CEMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+CEMKit.h"; path = "CEMKit/UILabel+CEMKit.h"; sourceTree = "<group>"; };
@@ -72,6 +72,9 @@
 		B27E4F131B32BAD100151E29 /* UIColor+CEMKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CEMKit.m"; path = "CEMKit/UIColor+CEMKit.m"; sourceTree = "<group>"; };
 		B27E4F141B32BAD100151E29 /* UIImageView+CEMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+CEMKit.h"; path = "CEMKit/UIImageView+CEMKit.h"; sourceTree = "<group>"; };
 		B27E4F151B32BAD100151E29 /* UIImageView+CEMKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+CEMKit.m"; path = "CEMKit/UIImageView+CEMKit.m"; sourceTree = "<group>"; };
+		B27E4F1A1B32BB9900151E29 /* NSAttributedString+CEMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CEMKit.h"; sourceTree = "<group>"; };
+		B27E4F1B1B32BB9900151E29 /* NSAttributedString+CEMKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CEMKit.m"; sourceTree = "<group>"; };
+		B27E4F1D1B32C3DB00151E29 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +139,6 @@
 				B234270719488A0000A0D11C /* AppDelegate.m */,
 				B234272719488A1B00A0D11C /* TestViewController.h */,
 				B234272819488A1B00A0D11C /* TestViewController.m */,
-				B234270919488A0000A0D11C /* Images.xcassets */,
 				B23426FE19488A0000A0D11C /* Supporting Files */,
 			);
 			path = CEMKit;
@@ -145,6 +147,8 @@
 		B23426FE19488A0000A0D11C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B234270919488A0000A0D11C /* Images.xcassets */,
+				B27E4F1D1B32C3DB00151E29 /* Main.storyboard */,
 				B23426FF19488A0000A0D11C /* CEMKit-Info.plist */,
 				B234270019488A0000A0D11C /* InfoPlist.strings */,
 				B234270319488A0000A0D11C /* main.m */,
@@ -175,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				B234272A19488A3600A0D11C /* CEMKit.h */,
-				B234272B19488A3600A0D11C /* CEMKit.m */,
 				B25B05E11A03A87E0072A231 /* UIView+CEMKit.h */,
 				B25B05E21A03A87E0072A231 /* UIView+CEMKit.m */,
 				B27E4EFC1B32A93100151E29 /* UILabel+CEMKit.h */,
@@ -188,6 +191,8 @@
 				B27E4F151B32BAD100151E29 /* UIImageView+CEMKit.m */,
 				B27E4F0E1B32BAD100151E29 /* NSURLConnection+CEMKIt.h */,
 				B27E4F0F1B32BAD100151E29 /* NSURLConnection+CEMKIt.m */,
+				B27E4F1A1B32BB9900151E29 /* NSAttributedString+CEMKit.h */,
+				B27E4F1B1B32BB9900151E29 /* NSAttributedString+CEMKit.m */,
 			);
 			name = CEMKit;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27E4F1E1B32C3DB00151E29 /* Main.storyboard in Resources */,
 				B234270219488A0000A0D11C /* InfoPlist.strings in Resources */,
 				B234270A19488A0000A0D11C /* Images.xcassets in Resources */,
 			);
@@ -287,11 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B234272C19488A3600A0D11C /* CEMKit.m in Sources */,
 				B234272919488A1B00A0D11C /* TestViewController.m in Sources */,
 				B234270819488A0000A0D11C /* AppDelegate.m in Sources */,
 				B27E4F161B32BAD100151E29 /* NSURLConnection+CEMKIt.m in Sources */,
 				B27E4F181B32BAD100151E29 /* UIColor+CEMKit.m in Sources */,
+				B27E4F1C1B32BB9900151E29 /* NSAttributedString+CEMKit.m in Sources */,
 				B27E4EFE1B32A93100151E29 /* UILabel+CEMKit.m in Sources */,
 				B25B05E31A03A87E0072A231 /* UIView+CEMKit.m in Sources */,
 				B27E4F171B32BAD100151E29 /* UIButton+CEMKit.m in Sources */,
@@ -419,6 +425,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CEMKit/CEMKit-Prefix.pch";
 				INFOPLIST_FILE = "CEMKit/CEMKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.studionord.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -433,6 +440,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CEMKit/CEMKit-Prefix.pch";
 				INFOPLIST_FILE = "CEMKit/CEMKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.studionord.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

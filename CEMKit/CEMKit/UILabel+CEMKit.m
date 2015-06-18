@@ -19,6 +19,7 @@
     
     if ((self = [super init])) {
         
+        [self setNumberOfLines:0];
         [self setAttributedText:attributedText];
         [self setTextAlignment:textAlignment];
         
@@ -38,6 +39,7 @@
     
     if ((self = [super init])) {
         
+        [self setNumberOfLines:0];
         [self setAttributedText:attributedText];
         [self setTextAlignment:textAlignment];
         
@@ -57,6 +59,7 @@
 
     if ((self = [super init])) {
         
+        [self setNumberOfLines:0];
         [self setAttributedText:attributedText];
         [self setTextAlignment:textAlignment];
         
@@ -79,6 +82,7 @@
 
     if ((self = [super init])) {
         
+        [self setNumberOfLines:0];
         [self setText:text];
         [self setTextColor:textColor];
         [self setFont:font];
@@ -101,6 +105,7 @@
 
     if ((self = [super init])) {
         
+        [self setNumberOfLines:0];
         [self setText:text];
         [self setTextColor:textColor];
         [self setFont:font];
@@ -124,6 +129,7 @@
     
     if ((self = [super init])) {
         
+        [self setNumberOfLines:0];
         [self setText:text];
         [self setTextColor:textColor];
         [self setFont:font];
