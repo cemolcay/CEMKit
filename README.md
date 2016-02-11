@@ -11,7 +11,7 @@ Instal
 Copy & paste CEMKit folder into your project
 then `#import CEMKit.h`
 
-### Cocoapods
+### CocoaPods
 
 ``` ruby
 pod 'CEMKit'
